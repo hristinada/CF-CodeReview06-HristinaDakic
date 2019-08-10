@@ -38,7 +38,8 @@ h1 {
   outline: none;
   font-size: 2.5vw;
   color: white;
-  background-color: #1e8a73; }
+  background-color: #1e8a73;
+  cursor: pointer; }
 
 #checkboxes {
   display: flex;
@@ -92,7 +93,8 @@ h2 {
   padding: 1%; }
 
 .handle {
-  padding: 0 1%; }
+  padding: 0 1%;
+  cursor: grab; }
 
 #tasks {
   border-top: solid grey 1px; }
@@ -113,10 +115,11 @@ h2 {
 .buttonCheck, .buttonDelete {
   flex-basis: 10%;
   outline: none;
-  background-color: #1e8a73;
   border: none;
+  font-size: 2.5vw;
   color: white;
-  font-size: 2.5vw; }
+  background-color: #1e8a73;
+  cursor: pointer; }
 
 .buttonDelete {
   background-color: #DA3849; }

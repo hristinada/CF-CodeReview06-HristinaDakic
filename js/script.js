@@ -34,6 +34,7 @@ $(document).ready(function(){
 		//check tasks as done on click and display them differently. At the same time remove the reactivation button for completed tasks if the checkbox is unchecked. At the same time hide the completed tasks if the checkbox is unchecked.
 		$(".buttonCheck").off();
 		$(".buttonCheck").click(function() {
+			$(this).toggleClass("done");
 			$(this).parent().toggleClass("done");
 			if ($("#checkboxEnable").prop("checked")) {
 				$(".done > .buttonCheck").show();
