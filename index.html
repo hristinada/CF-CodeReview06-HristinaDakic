@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<title>ToDoList</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+<body>
+	<div id="toDoList">
+		
+		<h1>ToDo List</h1>
+		
+		<div id="newTask">
+			<input type="text" id="newTaskInput" placeholder="Add new task">
+			<button id="addTaskButton">Add</button>
+		</div>
+		
+		<div id="checkboxes">
+			<label class="container">enable reactivation of completed tasks
+				<input type="checkbox" id="checkboxEnable" checked>
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">show completed tasks
+				<input type="checkbox" id="checkboxShow" checked>
+				<span class="checkmark"></span>
+			</label>
+		</div>
+
+		<h2>Tasks</h2>
+		
+		<div id="tasks">
+		</div>
+
+		<script type="text/javascript" src="js/script.js"></script>
+	</div>
+</body>
+</html>

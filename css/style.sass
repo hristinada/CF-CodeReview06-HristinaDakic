@@ -1,0 +1,154 @@
+$mainFont: 'Roboto', sans-serif
+$darkGrey: #35495D
+$darkGreen: #1e8a73
+$lightGreen: #2ABB9C
+$kindaRed: #DA3849
+
+body
+	margin: 0
+	background-color: white
+	font-family: $mainFont
+
+#toDoList
+	margin: 5% 10%
+	border-left: solid grey 1px
+	border-right: solid grey 1px
+	border-top-left-radius: 10px
+	border-top-right-radius: 10px
+
+//=================
+//Style the input field for the new task and the button
+//======================================================
+
+h1
+	margin: 0
+	padding: 2%
+	font-size: 4vw
+	text-align: center
+	border-top-left-radius: 10px
+	border-top-right-radius: 10px
+	color: white
+	background-color: $darkGrey
+
+#newTask
+	display: flex
+
+#newTaskInput
+	flex-grow: 1
+	border: none
+	margin: 0
+	padding: 1%
+	outline: none
+	font-size: 2.5vw
+
+#addTaskButton
+	flex-basis: 20%
+	padding: 1%
+	border: none
+	outline: none
+	font-size: 2.5vw
+	color: white
+	background-color: $darkGreen
+	
+
+//======================
+//style the checkboxes
+//=========================
+
+#checkboxes
+	display: flex
+	flex-flow: row wrap
+	padding: 1%
+	border-top: solid grey 1px
+	
+	.container
+		display: block
+		position: relative
+		width: 100%
+		padding-left: 7%
+		margin-bottom: 2%
+		cursor: pointer
+		font-size: 2vw
+		user-select: none
+		input
+			position: absolute
+			opacity: 0
+			cursor: pointer
+			height: 0
+			width: 0
+		.checkmark
+			position: absolute
+			top: 0
+			left: 0
+			height: 3vw
+			width: 3vw
+			background-color: lightgrey
+	
+	.container input:checked ~ .checkmark
+			background-color: $darkGrey
+
+	.checkmark:after
+		content: ""
+		position: absolute
+		display: none
+	
+	.container input:checked ~ .checkmark:after
+		display: block
+
+	.container .checkmark:after
+		left: 40%
+		top: 25%
+		width: 0.4vw
+		height: 1vw
+		border: solid white
+		border-width: 0 0.4vw 0.4vw 0
+		-webkit-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		transform: rotate(45deg)
+
+//===============
+//style the tasks
+//===================
+
+h2
+	font-size: 3vw
+	color: $darkGrey
+	padding: 1%
+
+.handle
+	padding: 0 1%
+
+#tasks
+	border-top: solid grey 1px
+
+.individualTasks
+	display: flex
+	justify-content: flex-end
+	padding: 1%
+	border-bottom: solid grey 1px
+	font-size: 2.5vw
+	color: white
+	background-color: $lightGreen
+	
+	p
+		margin: 0
+		flex-grow: 1
+		outline: none
+	
+.buttonCheck
+	flex-basis: 10%
+	outline: none
+	background-color: $darkGreen
+	border: none
+	color: white
+	font-size: 2.5vw
+
+.buttonDelete
+	@extend .buttonCheck
+	background-color: $kindaRed
+
+.done
+	background-color: lightgrey
+	text-decoration: line-through
+
+

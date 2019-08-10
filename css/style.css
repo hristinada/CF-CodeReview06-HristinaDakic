@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Roboto", sans-serif; }
+
+#toDoList {
+  margin: 5% 10%;
+  border-left: solid grey 1px;
+  border-right: solid grey 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
+
+h1 {
+  margin: 0;
+  padding: 2%;
+  font-size: 4vw;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  background-color: #35495D; }
+
+#newTask {
+  display: flex; }
+
+#newTaskInput {
+  flex-grow: 1;
+  border: none;
+  margin: 0;
+  padding: 1%;
+  outline: none;
+  font-size: 2.5vw; }
+
+#addTaskButton {
+  flex-basis: 20%;
+  padding: 1%;
+  border: none;
+  outline: none;
+  font-size: 2.5vw;
+  color: white;
+  background-color: #1e8a73; }
+
+#checkboxes {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1%;
+  border-top: solid grey 1px; }
+  #checkboxes .container {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-left: 7%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    font-size: 2vw;
+    user-select: none; }
+    #checkboxes .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+    #checkboxes .container .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3vw;
+      width: 3vw;
+      background-color: lightgrey; }
+  #checkboxes .container input:checked ~ .checkmark {
+    background-color: #35495D; }
+  #checkboxes .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  #checkboxes .container input:checked ~ .checkmark:after {
+    display: block; }
+  #checkboxes .container .checkmark:after {
+    left: 40%;
+    top: 25%;
+    width: 0.4vw;
+    height: 1vw;
+    border: solid white;
+    border-width: 0 0.4vw 0.4vw 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+h2 {
+  font-size: 3vw;
+  color: #35495D;
+  padding: 1%; }
+
+.handle {
+  padding: 0 1%; }
+
+#tasks {
+  border-top: solid grey 1px; }
+
+.individualTasks {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1%;
+  border-bottom: solid grey 1px;
+  font-size: 2.5vw;
+  color: white;
+  background-color: #2ABB9C; }
+  .individualTasks p {
+    margin: 0;
+    flex-grow: 1;
+    outline: none; }
+
+.buttonCheck, .buttonDelete {
+  flex-basis: 10%;
+  outline: none;
+  background-color: #1e8a73;
+  border: none;
+  color: white;
+  font-size: 2.5vw; }
+
+.buttonDelete {
+  background-color: #DA3849; }
+
+.done {
+  background-color: lightgrey;
+  text-decoration: line-through; }
+
+/*# sourceMappingURL=style.css.map */
