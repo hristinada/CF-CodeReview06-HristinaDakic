@@ -12,10 +12,10 @@ $(document).ready(function(){
 		//append new tasks to the div "tasks"
 		tasks.prepend(` 
 			<div class="individualTasks">
-				<span class="handle">&#8801;</span>
-				<p contenteditable="true">${newTask}</p>
 				<button class="buttonCheck"><i class="fa fa-check-square"></i></button>
+				<p contenteditable="true">${newTask}</p>
 				<button class="buttonDelete"><i class="fa fa-trash"></i></button>
+				<span class="handle">&#8801;</span>
 			</div>`);
 
 		//clear the input field after entering a new task	
@@ -35,12 +35,14 @@ $(document).ready(function(){
 		$(".buttonCheck").off();
 		$(".buttonCheck").click(function() {
 			$(this).toggleClass("done");
+			$(this).toggleClass("green");
 			$(this).parent().toggleClass("done");
-			if ($("#checkboxEnable").prop("checked")) {
-				$(".done > .buttonCheck").show();
-			} else {
-				$(".done > .buttonCheck").hide();
-			}
+			$(this).siblings("p").toggleClass("linethrough");
+			// if ($("#checkboxEnable").prop("checked")) {
+			// 	$(".done > .buttonCheck").show();
+			// } else {
+			// 	$(".done > .buttonCheck").hide();
+			// }
 			if ($("#checkboxShow").prop("checked")) {
 				$(".done").show();
 			} else {
@@ -56,14 +58,14 @@ $(document).ready(function(){
 		}
 	});
 	
-	//Checkbox: enable reactivation of completed tasks**toogle doesn't work well**
-	$("#checkboxEnable").click(function() {
-		if($(this).prop("checked")) {
-			$(".done > .buttonCheck").show();
-		} else {
-			$(".done > .buttonCheck").hide();
-		}
-	});
+	// //Checkbox: enable reactivation of completed tasks**toogle doesn't work well**
+	// $("#checkboxEnable").click(function() {
+	// 	if($(this).prop("checked")) {
+	// 		$(".done > .buttonCheck").show();
+	// 	} else {
+	// 		$(".done > .buttonCheck").hide();
+	// 	}
+	// });
 
 	//Checkbox: show and hide completed tasks**toogle doesn't work well**
 	$("#checkboxShow").click(function() {

@@ -105,27 +105,34 @@ h2 {
   padding: 1%;
   border-bottom: solid grey 1px;
   font-size: 2.5vw;
-  color: white;
-  background-color: #2ABB9C; }
+  color: #35495D;
+  background-color: lightgrey; }
   .individualTasks p {
     margin: 0;
+    padding: 1%;
     flex-grow: 1;
     outline: none; }
 
 .buttonCheck, .buttonDelete {
   flex-basis: 10%;
+  padding: 0;
   outline: none;
   border: none;
   font-size: 2.5vw;
   color: white;
-  background-color: #1e8a73;
+  background-color: lightgrey;
   cursor: pointer; }
 
 .buttonDelete {
-  background-color: #DA3849; }
+  color: #DA3849; }
 
-.done {
-  background-color: lightgrey;
+.handle {
+  font-size: 4vw; }
+
+.green {
+  color: #1e8a73; }
+
+.linethrough {
   text-decoration: line-through; }
 
 /*# sourceMappingURL=style.css.map */
